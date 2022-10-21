@@ -2,11 +2,10 @@
 
 English | [简体中文](./README.zh-CN.md)
 
-iamqiz add:
-from electron 14, the "remote" module is removed and is replaced with "@electron/remote" module 
-see:
-https://www.electronjs.org/docs/latest/breaking-changes#planned-breaking-api-changes-140
-electron/remote: Bridge JavaScript objects from the main process to the renderer process in Electron.
+iamqiz add:  
+from electron 14, the "remote" module is removed and is replaced with "@electron/remote" module   
+see:  
+https://www.electronjs.org/docs/latest/breaking-changes#planned-breaking-api-changes-140  
 https://github.com/electron/remote
 
 ## Introduction
