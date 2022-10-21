@@ -1,4 +1,4 @@
-const debug = false
+const debug = true
 const print = debug ? console.log.bind(console) : () => {}
 
 const on = (() => {
@@ -95,7 +95,7 @@ const move = (element, end, duration = 300) => {
     }
   })
 
-  
+
 }
 
 module.exports = {

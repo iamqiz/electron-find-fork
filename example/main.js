@@ -3,17 +3,20 @@ const { app, BrowserWindow, globalShortcut } = electron
 const path = require('path')
 let win
 const winURL = 'file://' + path.normalize(`${__dirname}/index.html`)
+require('@electron/remote/main').initialize()
 
-function createWindow () {   
-  win = new BrowserWindow({ 
+function createWindow () {
+  win = new BrowserWindow({
     width: 1280,
     height: 1040,
     center: false,
     webPreferences: {
       nodeIntegration: true,
       plugins: true,
-      } 
+      contextIsolation:false,
+      }
   })
+  require("@electron/remote/main").enable(win.webContents);
   win.loadURL(winURL)
   //win.webContents.openDevTools()
   win.on('closed', () => {
@@ -30,9 +33,9 @@ function createWindow () {
   win.on('blur', () => {
     globalShortcut.unregister('CommandOrControl+F')
   })
-  
+
 }
-  
+
 app.on('ready', createWindow)
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

@@ -1,8 +1,9 @@
 const { remote, ipcRenderer } = require('electron')
 const { FindInPage } = require('../src/index.js')
 
+const { getCurrentWebContents } = require('@electron/remote')
 
-let findInPage = new FindInPage(remote.getCurrentWebContents(), {
+let findInPage = new FindInPage(getCurrentWebContents(), {
   preload: true,
   offsetTop: 6,
   offsetRight: 10

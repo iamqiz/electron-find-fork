@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/TheoXiong/electron-find#readme",
   "devDependencies": {
-    "electron": "^6.0.0"
+    "electron": "^21.0.0"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8"
   }
 }
