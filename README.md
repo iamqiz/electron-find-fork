@@ -2,6 +2,13 @@
 
 English | [简体中文](./README.zh-CN.md)
 
+iamqiz add:
+from electron 14, the "remote" module is removed and is replaced with "@electron/remote" module 
+see:
+https://www.electronjs.org/docs/latest/breaking-changes#planned-breaking-api-changes-140
+electron/remote: Bridge JavaScript objects from the main process to the renderer process in Electron.
+https://github.com/electron/remote
+
 ## Introduction
 Find all matches for the text in electron app
 
@@ -11,7 +18,7 @@ Find all matches for the text in electron app
 - support case-sensitive
 - Auto find when user inputing is change
 - The find interface is separated from electron view
-- support electron version ^1.8.0, ^2.0.0, ^3.0.0, ^4.0.0
+- support electron version ^14-21.0.0  
 - support platform of Windows, Linux, Mac
 
 ## Demo
